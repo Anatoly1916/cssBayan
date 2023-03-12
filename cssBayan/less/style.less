@@ -63,7 +63,56 @@ body {
     }
 }
 
-
+@media (min-width:300px) {
+    body {
+        font-size: 1.3rem;
+    }
+}
+@media (min-width:700px) {
+    body {
+        font-size: 1.6rem;
+    }
+}
+@media (min-width: 900px) {
+    body {
+        font-size: 2rem;
+    }
+    .container {
+        &:hover {
+            cursor: pointer;
+            .card {
+                color: #000;
+            }
+            .plus {
+                display: block;
+                width: 2rem;
+                transition: .2s;
+            }
+        }
+    }
+    .card {
+        &:hover {
+            .pic {
+                display: block;
+            }
+            .plus {
+                transform: rotate(45deg);
+                transform-origin: center;
+            }
+        }
+        &:active {
+            h2 {
+                color: blue;
+            }
+            .plus {
+                color: blue;
+            }
+            .pic {
+                opacity: 0.8;
+            }
+        }
+    }
+}
 
 
 
