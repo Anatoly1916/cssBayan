@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+
+
+html {
+    font-size: 10px;
+}
+h2 {
+    margin: 0;
+    padding: 0;
+    height: 8rem;
+    line-height: 3.5;
+}
+body {
+    font-family: Roboto;
+    font-weight: 700;
+}
+.container {
+    max-width: 90rem;
+    margin: 0 auto;
+    .plus {
+        display: none;
+        transition: 0.3s;
+    }
+    input {
+        display: none;
+    }
+    .card {
+        display: block;
+        border-top: 1px solid #b3a9a9;
+        color: blue;
+        .text {
+            display: flex;
+            justify-content: space-between;
+        }
+        .pic {
+            display: none;
+            margin: 0 auto 3rem;
+            transition: 0.3s;
+            width: 30rem;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    #first:checked ~ #switch1,
+    #second:checked ~ #switch2,
+    #third:checked ~ #switch3,
+    #fourth:checked ~ #switch4,
+    #fifth:checked ~ #switch5 {
+        .text {
+            color: #000;
+        }
+        .pic {
+            display: block;
+            .mem {
+                width: 100%;
+            }
+        }
+        .plus {
+            transform: rotate(45deg);
+            transform-origin: center;
+        }
+    }
+}
+
+@media (min-width:300px) {
+    body {
+        font-size: 1.3rem;
+    }
+}
+@media (min-width:700px) {
+    body {
+        font-size: 1.6rem;
+    }
+}
+@media (min-width: 900px) {
+    body {
+        font-size: 2rem;
+    }
+    .container {
+        cursor: pointer;
+        &:hover {
+            .card {
+                cursor: pointer;
+                color: #000;
+            }
+            .plus {
+                display: block;
+                width: 2rem;
+                transition: .2s;
+            }
+        }
+    }
+    .card {
+        &:hover {
+            .pic {
+                display: block;
+            }
+            .plus {
+                transform: rotate(45deg);
+                transform-origin: center;
+            }
+        }
+        &:active {
+            h2 {
+                color: blue;
+            }
+            .plus {
+                color: blue;
+            }
+            .pic {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+
+
