@@ -1,0 +1,85 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9vAw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlvAw.ttf) format('truetype');
+}
+html {
+  font-size: 10px;
+}
+h2 {
+  margin: 0;
+  padding: 0;
+  height: 8rem;
+  line-height: 3.5;
+}
+body {
+  font-family: Roboto;
+  font-weight: 700;
+}
+.container {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+.container .plus {
+  display: none;
+  transition: 0.3s;
+}
+.container input {
+  display: none;
+}
+.container .card {
+  display: block;
+  border-top: 1px solid #b3a9a9;
+  color: blue;
+}
+.container .card .text {
+  display: flex;
+  justify-content: space-between;
+}
+.container .card .pic {
+  display: none;
+  margin: 0 auto 3rem;
+  transition: 0.3s;
+  width: 30rem;
+}
+.container .card .pic img {
+  width: 100%;
+}
+.container #first:checked ~ #switch1 .text,
+.container #second:checked ~ #switch2 .text,
+.container #third:checked ~ #switch3 .text,
+.container #fourth:checked ~ #switch4 .text,
+.container #fifth:checked ~ #switch5 .text {
+  color: #000;
+}
+.container #first:checked ~ #switch1 .pic,
+.container #second:checked ~ #switch2 .pic,
+.container #third:checked ~ #switch3 .pic,
+.container #fourth:checked ~ #switch4 .pic,
+.container #fifth:checked ~ #switch5 .pic {
+  display: block;
+}
+.container #first:checked ~ #switch1 .pic .mem,
+.container #second:checked ~ #switch2 .pic .mem,
+.container #third:checked ~ #switch3 .pic .mem,
+.container #fourth:checked ~ #switch4 .pic .mem,
+.container #fifth:checked ~ #switch5 .pic .mem {
+  width: 100%;
+}
+.container #first:checked ~ #switch1 .plus,
+.container #second:checked ~ #switch2 .plus,
+.container #third:checked ~ #switch3 .plus,
+.container #fourth:checked ~ #switch4 .plus,
+.container #fifth:checked ~ #switch5 .plus {
+  transform: rotate(45deg);
+  transform-origin: center;
+}
